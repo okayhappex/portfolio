@@ -17,7 +17,7 @@
         <span>He - Him - <s>boy</s> Bro</span>
       </div>
       <div class="grid grid-cols-6 gap-1">
-        <a href="https://github.com/ha2pex"><Github className="fill-white w-6 h-6" /></a>
+        <a href="https://github.com/okayhappex"><Github className="fill-white w-6 h-6" /></a>
         <a href="https://reddit.com/u/ha2pex"><Reddit className="stroke-white fill-white w-6 h-6" /></a>
         <a href="https://dribbble.com/happex"><Dribbble className="fill-white w-6 h-6" /></a>
         <a href="https://scratch.mit.edu/users/happex"><Scratch className="fill-white w-6 h-6" /></a>
