@@ -6,6 +6,7 @@
   import Vue from '../components/prog/Vue.vue'
   import Tailwind from '../components/prog/Tailwind.vue'
   import Javascript from '../components/prog/Javascript.vue'
+  import Python from '../components/prog/Python.vue'
 </script>
 <template>
   <header class="mb-8 space-y-8 md:flex md:space-x-8 md:space-y-0">
@@ -35,7 +36,7 @@
     </div>
   </header>
   <section class="space-y-8">
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:px-24">
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
       <div class="bg-sky-600/20 text-center rounded-2xl p-4 space-y-2">
         <Tailwind className="w-16 h-16 mx-auto fill-sky-600" />
         <h2 class="text-2xl font-bold">TailwindCSS</h2>
@@ -50,6 +51,11 @@
         <Javascript className="w-16 h-16 mx-auto fill-yellow-600" />
         <h2 class="text-2xl font-bold">Javascript</h2>
         <div class="bg-slate-200 rounded-lg w-2/3 h-6 mx-auto sm:rounded-full sm:h-4 dark:bg-yellow-900"><div class="bg-yellow-600 rounded-lg w-[45%] h-full sm:rounded-full"></div></div>
+      </div>
+      <div class="bg-blue-800/20 text-center rounded-2xl p-4 space-y-2">
+        <Python className="w-16 h-16 mx-auto" />
+        <h2 class="text-2xl font-bold">Python</h2>
+        <div class="bg-slate-200 rounded-lg w-2/3 h-6 mx-auto sm:rounded-full sm:h-4 dark:bg-blue-950"><div class="bg-blue-900 rounded-lg w-[70%] h-full sm:rounded-full"></div></div>
       </div>
     </div>
   </section>
