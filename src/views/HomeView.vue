@@ -10,7 +10,7 @@
 </script>
 <template>
   <header class="mb-8 space-y-8 md:flex md:space-x-8 md:space-y-0">
-    <div class="bg-gradient-to-tr from-purple-500 to-blue-500 text-white rounded-3xl shadow-xl p-8 space-y-4 md:w-[28rem] dark:from-purple-700 dark:to-blue-700">
+    <div class="bg-gradient-to-br from-[#ff8e26] to-[#ff3225] text-white rounded-3xl shadow-3xl p-8 space-y-4 md:w-[28rem]">
       <img src="https://cdn2.scratch.mit.edu/get_image/user/84212389_500x500.png"  class="w-36 h-36 mx-auto rounded-full shadow-2xl shadow-black/40"/>
       <div>
         <h1 class="text-2xl font-bold">@okayhappex</h1>
