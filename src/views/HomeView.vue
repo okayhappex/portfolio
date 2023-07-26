@@ -3,16 +3,17 @@
   import Dribbble from '../components/social/Dribbble.vue'
   import Reddit from '../components/social/Reddit.vue'
   import Scratch from '../components/social/Scratch.vue'
+  import Darflen from '../components/social/Darflen.vue'
+
   import Vue from '../components/prog/Vue.vue'
   import Tailwind from '../components/prog/Tailwind.vue'
   import Javascript from '../components/prog/Javascript.vue'
   import Python from '../components/prog/Python.vue'
 </script>
 <template>
-  <div class="bg-[#ff8e26] rounded-3xl shadow-3xl p-8">
-    <h3 class="text-2xl font-semibold">Join Darflen!</h3>
+  <div class=" bg-slate-800 rounded-3xl shadow-3xl p-8 mb-8">
+    <h3 class="text-2xl font-semibold"><Darflen className="inline fill-[#d7657a] h-6 -translate-y-[2px]"/> Join Darflen!</h3>
     <p>The new social media. <a href="https://darflen.com/join?ref=52f0181cbf005791" class="text-blue-600">Join here</a></p>
-    <!-- may not work properly for one or two days as I don't have any access to my computer. -->
   </div>
   <header class="mb-8 space-y-8 md:flex md:space-x-8 md:space-y-0">
     <div class="bg-gradient-to-br from-[#ff8e26] to-[#ff3225] text-white rounded-3xl shadow-3xl p-8 space-y-4 md:w-[28rem]">
@@ -27,6 +28,7 @@
         <a href="https://reddit.com/u/ha2pex"><Reddit className="stroke-white fill-white w-6 h-6" /></a>
         <a href="https://dribbble.com/happex"><Dribbble className="fill-white w-6 h-6" /></a>
         <a href="https://scratch.mit.edu/users/happex"><Scratch className="fill-white w-6 h-6" /></a>
+        <a href="https://darflen.com/users/6fed9705839fa26ef4f010e9"><Darflen className="fill-white w-6 h-6" /></a>
       </div>
     </div>
     <div class="space-y-8 md:grow md:p-8">
