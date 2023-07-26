@@ -9,6 +9,11 @@
   import Python from '../components/prog/Python.vue'
 </script>
 <template>
+  <div class="bg-[#ff8e26] rounded-3xl shadow-3xl p-8">
+    <h3 class="text-2xl font-semibold">Join Darflen!</h3>
+    <p>The new social media. <a href="https://darflen.com/join?ref=52f0181cbf005791" class="text-blue-600">Join here</a></p>
+    <!-- may not work properly for one or two days as I don't have any access to my computer. -->
+  </div>
   <header class="mb-8 space-y-8 md:flex md:space-x-8 md:space-y-0">
     <div class="bg-gradient-to-br from-[#ff8e26] to-[#ff3225] text-white rounded-3xl shadow-3xl p-8 space-y-4 md:w-[28rem]">
       <img src="https://cdn2.scratch.mit.edu/get_image/user/84212389_500x500.png"  class="w-36 h-36 mx-auto rounded-full shadow-2xl shadow-black/40"/>
