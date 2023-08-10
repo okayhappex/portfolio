@@ -11,19 +11,15 @@
   import Python from '../components/prog/Python.vue'
 </script>
 <template>
-  <div class=" bg-slate-800 rounded-3xl shadow-3xl p-8 mb-8">
-    <h3 class="text-2xl font-semibold"><Darflen className="inline fill-[#d7657a] h-6 -translate-y-[2px]"/> Join Darflen!</h3>
-    <p>The new social media. <a href="https://darflen.com/join?ref=52f0181cbf005791" class="text-blue-600">Join here</a></p>
-  </div>
-  <header class="mb-8 space-y-8 md:flex md:space-x-8 md:space-y-0">
-    <div class="bg-gradient-to-br from-[#ff8e26] to-[#ff3225] text-white rounded-3xl shadow-3xl p-8 space-y-4 md:w-[28rem]">
-      <img src="https://cdn2.scratch.mit.edu/get_image/user/84212389_500x500.png"  class="w-36 h-36 mx-auto rounded-full shadow-2xl shadow-black/40"/>
+  <header class="bg-[url('/banner.png')] bg-cover bg-center bg-no-repeat text-white text-center rounded-3xl space-y-8">
+    <div class="bg-slate-800/10 backdrop-blur-2xl rounded-3xl p-8 space-y-4 shadow-2xl">
+      <img src="https://cdn2.scratch.mit.edu/get_image/user/84212389_500x500.png" class="w-32 h-32 mx-auto rounded-full shadow-2xl shadow-black/40"/>
       <div>
-        <h1 class="text-2xl font-bold">@okayhappex</h1>
-        <span class="block text-xs text-white/50">happex#2579 - Ui/Ux designer</span>
-        <span>He - Him - <s>boy</s> Bro</span>
+        <h1 class="text-4xl font-bold">happex</h1>
+        <span class="block text-sm">@okayhappex</span>
       </div>
-      <div class="grid grid-cols-6 gap-1">
+      <p class="text-white/25 text-xs font-medium">He / Him - Ui/Ux designer</p>
+      <div class="flex space-x-4 place-content-center">
         <a href="https://github.com/okayhappex"><Github className="fill-white w-6 h-6" /></a>
         <a href="https://reddit.com/u/ha2pex"><Reddit className="stroke-white fill-white w-6 h-6" /></a>
         <a href="https://dribbble.com/happex"><Dribbble className="fill-white w-6 h-6" /></a>
@@ -31,38 +27,39 @@
         <a href="https://darflen.com/users/6fed9705839fa26ef4f010e9"><Darflen className="fill-white w-6 h-6" /></a>
       </div>
     </div>
-    <div class="space-y-8 md:grow md:p-8">
-      <div class="space-y-4">
-        <h2 class="text-xl font-bold">About me</h2>
-        <p>Hey! It's happex, a French guy in my teens. I've been programming for more than six years and I'm in the web development since March, 2021.</p>
-      </div>
-      <div class="space-y-5 overflow-x-auto md:overflow-hidden">
-        <h2 class="text-xl font-bold">Tech stack <span class="text-xs">(provided by <a href="https://skillicons.dev" target="_blank" class="text-blue-500">Skill Icons</a>)</span></h2>
-        <img src="https://skillicons.dev/icons?i=html,css,js,nodejs,tailwind,electron,vite,nextjs,vue,react,vercel,cloudflare,replit,github,git,vscode&perline=10">
-      </div>
-    </div>
   </header>
-  <section class="space-y-8">
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
-      <div class="bg-sky-600/20 text-center rounded-2xl p-4 space-y-2">
+  <div class="space-y-8 md:px-24">
+    <div class="space-y-4">
+      <h2 class="text-xl font-bold">About me</h2>
+      <p>Hey! It's happex, a French guy in my teens. I've been programming for more than six years and I'm in the web development since March, 2021.</p>
+    </div>
+    <div class="space-y-5 overflow-x-auto md:overflow-hidden">
+      <h2 class="text-xl font-bold">Tech stack <span class="text-xs">(provided by <a href="https://skillicons.dev" target="_blank" class="text-blue-500">Skill Icons</a>)</span></h2>
+      <img src="https://skillicons.dev/icons?i=html,css,js,nodejs,tailwind,electron,vite,nextjs,vue,react,vercel,cloudflare,replit,github,git,vscode&perline=10" class="hidden md:block" />
+      <img src="https://skillicons.dev/icons?i=html,css,js,nodejs,tailwind,electron,vite,nextjs,vue,react,vercel,cloudflare,replit,github,git,vscode&perline=5" class="md:hidden" />
+    </div>
+  </div>
+  <section class="space-y-8 md:px-24">
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+      <div class="bg-sky-600/30 text-center rounded-2xl p-4 space-y-2">
         <Tailwind className="w-16 h-16 mx-auto fill-sky-600" />
         <h2 class="text-2xl font-bold">TailwindCSS</h2>
-        <div class="bg-slate-200 rounded-lg w-2/3 h-6 mx-auto sm:rounded-full sm:h-4 dark:bg-sky-900"><div class="bg-sky-600 rounded-lg w-[85%] h-full sm:rounded-full"></div></div>
+        <div class="bg-slate-200 rounded-full w-2/3 h-6 mx-auto sm:h-4 dark:bg-sky-900"><div class="bg-sky-600 rounded-full w-[85%] h-full"></div></div>
       </div>
-      <div class="bg-emerald-600/20 text-center rounded-2xl p-4 space-y-2">
+      <div class="bg-emerald-600/30 text-center rounded-2xl p-4 space-y-2">
         <Vue className="w-16 h-16 mx-auto fill-emerald-600" />
         <h2 class="text-2xl font-bold">Vue.js</h2>
-        <div class="bg-slate-200 rounded-lg w-2/3 h-6 mx-auto sm:rounded-full sm:h-4 dark:bg-emerald-900"><div class="bg-emerald-600 rounded-lg w-[65%] h-full sm:rounded-full"></div></div>
+        <div class="bg-slate-200 rounded-full w-2/3 h-6 mx-auto sm:h-4 dark:bg-emerald-900"><div class="bg-emerald-600 rounded-full w-[65%] h-full"></div></div>
       </div>
-      <div class="bg-yellow-600/20 text-center rounded-2xl p-4 space-y-2">
+      <div class="bg-yellow-600/30 text-center rounded-2xl p-4 space-y-2">
         <Javascript className="w-16 h-16 mx-auto fill-yellow-600" />
         <h2 class="text-2xl font-bold">Javascript</h2>
-        <div class="bg-slate-200 rounded-lg w-2/3 h-6 mx-auto sm:rounded-full sm:h-4 dark:bg-yellow-900"><div class="bg-yellow-600 rounded-lg w-[45%] h-full sm:rounded-full"></div></div>
+        <div class="bg-slate-200 rounded-full w-2/3 h-6 mx-auto sm:h-4 dark:bg-yellow-900"><div class="bg-yellow-600 rounded-full w-[45%] h-full"></div></div>
       </div>
-      <div class="bg-blue-800/20 text-center rounded-2xl p-4 space-y-2">
+      <div class="bg-blue-800/30 text-center rounded-2xl p-4 space-y-2">
         <Python className="w-16 h-16 mx-auto" />
         <h2 class="text-2xl font-bold">Python</h2>
-        <div class="bg-slate-200 rounded-lg w-2/3 h-6 mx-auto sm:rounded-full sm:h-4 dark:bg-blue-950"><div class="bg-blue-900 rounded-lg w-[70%] h-full sm:rounded-full"></div></div>
+        <div class="bg-slate-200 rounded-full w-2/3 h-6 mx-auto sm:h-4 dark:bg-blue-950"><div class="bg-blue-900 rounded-full w-[70%] h-full"></div></div>
       </div>
     </div>
   </section>
