@@ -41,10 +41,10 @@
   </div>
   <section class="px-8 space-y-8 md:px-24">
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-      <div class="bg-sky-600/30 text-center rounded-2xl p-4 space-y-2">
-        <Tailwind className="w-16 h-16 mx-auto fill-sky-600" />
+      <div class="bg-blue-600/30 text-center rounded-2xl p-4 space-y-2">
+        <Tailwind className="w-16 h-16 mx-auto fill-blue-600" />
         <h2 class="text-2xl font-bold">TailwindCSS</h2>
-        <div class="bg-sky-900 rounded-full w-2/3 h-6 mx-auto sm:h-4"><div class="bg-sky-600 rounded-full w-[85%] h-full"></div></div>
+        <div class="bg-blue-900 rounded-full w-2/3 h-6 mx-auto sm:h-4"><div class="bg-blue-600 rounded-full w-[85%] h-full"></div></div>
       </div>
       <div class="bg-emerald-600/30 text-center rounded-2xl p-4 space-y-2">
         <Vue className="w-16 h-16 mx-auto fill-emerald-600" />
@@ -56,43 +56,43 @@
         <h2 class="text-2xl font-bold">Javascript</h2>
         <div class="bg-yellow-900 rounded-full w-2/3 h-6 mx-auto sm:h-4"><div class="bg-yellow-600 rounded-full w-[45%] h-full"></div></div>
       </div>
-      <div class="bg-blue-800/30 text-center rounded-2xl p-4 space-y-2">
+      <div class="bg-sky-800/30 text-center rounded-2xl p-4 space-y-2">
         <Python className="w-16 h-16 mx-auto" />
         <h2 class="text-2xl font-bold">Python</h2>
-        <div class="bg-blue-950 rounded-full w-2/3 h-6 mx-auto sm:h-4"><div class="bg-blue-900 rounded-full w-[70%] h-full"></div></div>
+        <div class="bg-sky-950 rounded-full w-2/3 h-6 mx-auto sm:h-4"><div class="bg-sky-900 rounded-full w-[70%] h-full"></div></div>
       </div>
     </div>
   </section>
-  <section class="p-8 space-y-8 md:px-24">
-    <h2 class="text-xl font-bold sm:text-center">What about Scratch ?</h2>
+  <section class="py-8 space-y-8 md:px-24 lg:px-0">
+    <h2 class="ml-8 text-xl font-bold sm:text-center sm:m-0">What about Scratch ?</h2>
     <img src="https://aviate.scratchers.tech/api/image/happex?width=600&height=90&dark=true" class="hidden mx-auto md:block" onclick="location.href = '/p/aviate'" />
-    <div class="grid grid-cols-1 rounded-3xl overflow-hidden sm:grid-cols-2">
-      <div class="bg-blue-500/20 text-center p-6 space-y-4">
-        <img src="https://cdn2.scratch.mit.edu/get_image/user/84212389_256x256.png" class="rounded-full shadow-lg w-24 h-auto mx-auto" />
+    <div class="grid grid-cols-1 overflow-hidden md:grid-cols-2 md:rounded-2xl lg:rounded-none">
+      <div class="bg-blue-900/50 text-center p-6 space-y-4">
+        <img src="https://cdn2.scratch.mit.edu/get_image/user/84212389_256x256.png" class="bg-white rounded-full shadow-lg w-24 h-auto mx-auto" />
         <div>
           <h2 class="text-xl font-bold">@happex <span class="text-white/50">#84212389</span></h2>
           <h3 class="font-semibold">Main account</h3>
         </div>
-        <p class="text-sm">This is my main account on where I make games (once a century) and some random brandings, sometimes.</p>
+        <p class="text-sm">This is my main account on which I make games (once a century) and some random brandings, sometimes.</p>
       </div>
-      <div class="bg-red-500/20 text-center p-6 space-y-4">
-        <img src="https://cdn2.scratch.mit.edu/get_image/user/107843467_256x256.png" class="rounded-full shadow-lg w-24 h-auto mx-auto" />
+      <div class="bg-red-900/50 text-center p-6 space-y-4">
+        <img src="https://cdn2.scratch.mit.edu/get_image/user/107843467_256x256.png" class="bg-white rounded-full shadow-lg w-24 h-auto mx-auto" />
         <div>
           <h2 class="text-xl font-bold">@WhatAnHaitianGuy <span class="text-white/50">#107843467</span></h2>
           <h3 class="font-semibold">Test account</h3>
         </div>
         <p class="text-sm">Don't worry about the name. This is my test account on which I remix projects and I share engines, and other junk technical stuff.</p>
       </div>
-      <div class="bg-orange-500/20 text-center p-6 space-y-4">
-        <img src="https://cdn2.scratch.mit.edu/get_image/user/93313766_256x256.png" class="rounded-full shadow-lg w-24 h-24 mx-auto" />
+      <div class="bg-orange-900/50 text-center p-6 space-y-4">
+        <img src="https://cdn2.scratch.mit.edu/get_image/user/93313766_256x256.png" class="bg-white rounded-full shadow-lg w-24 h-24 mx-auto" />
         <div>
           <h2 class="text-xl font-bold">@happette <span class="text-white/50">#93313766</span></h2>
           <h3 class="font-semibold">Test account</h3>
         </div>
         <p class="text-sm">happette is my bot account. I use it sometimes in order to test real bots I want to make (like Europium which is coming soon)</p>
       </div>
-      <div class="bg-amber-500/20 text-center p-6 space-y-4">
-        <img src="https://cdn2.scratch.mit.edu/get_image/user/18948_256x256.png" class="rounded-full shadow-lg w-24 h-24 mx-auto" />
+      <div class="bg-amber-900/50 text-center p-6 space-y-4">
+        <img src="https://cdn2.scratch.mit.edu/get_image/user/18948_256x256.png" class="bg-white rounded-full shadow-lg w-24 h-24 mx-auto" />
         <div>
           <h2 class="text-xl font-bold">@username <span class="text-white/50">#18948</span></h2>
           <h3 class="font-semibold">Not my account</h3>
