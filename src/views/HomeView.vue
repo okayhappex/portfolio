@@ -44,7 +44,7 @@
       <div class="bg-blue-600/30 text-center rounded-2xl p-4 space-y-2">
         <Tailwind className="w-16 h-16 mx-auto fill-blue-600" />
         <h2 class="text-2xl font-bold">TailwindCSS</h2>
-        <div class="bg-blue-900 rounded-full w-2/3 h-6 mx-auto sm:h-4"><div class="bg-blue-600 rounded-full w-[85%] h-full"></div></div>
+        <div class="bg-blue-900 rounded-full w-2/3 h-6 mx-auto sm:h-4"><div class="bg-blue-600 rounded-full w-[95%] h-full"></div></div>
       </div>
       <div class="bg-emerald-600/30 text-center rounded-2xl p-4 space-y-2">
         <Vue className="w-16 h-16 mx-auto fill-emerald-600" />
@@ -59,7 +59,7 @@
       <div class="bg-sky-800/30 text-center rounded-2xl p-4 space-y-2">
         <Python className="w-16 h-16 mx-auto" />
         <h2 class="text-2xl font-bold">Python</h2>
-        <div class="bg-sky-950 rounded-full w-2/3 h-6 mx-auto sm:h-4"><div class="bg-sky-900 rounded-full w-[70%] h-full"></div></div>
+        <div class="bg-sky-950 rounded-full w-2/3 h-6 mx-auto sm:h-4"><div class="bg-sky-900 rounded-full w-[80%] h-full"></div></div>
       </div>
     </div>
   </section>
