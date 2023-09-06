@@ -3,21 +3,23 @@
 @tailwind utilities;
 
 @layer utilities {
-  .scrollbar {
-    overflow-y: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: #888888 #ffffff;
-  }
+  @media only screen and (max-width: 360px) {
+    .scrollbar {
+      overflow-y: scroll;
+      scrollbar-width: thin;
+      scrollbar-color: #888888 #ffffff;
+    }
   
-  .scrollbar::-webkit-scrollbar {
-    width: 8px;
-  }
+    .scrollbar::-webkit-scrollbar {
+      width: 8px;
+    }
   
-  .scrollbar::-webkit-scrollbar-thumb {
-    background-color: #888888;
-  }
+    .scrollbar::-webkit-scrollbar-thumb {
+      background-color: #888888;
+    }
   
-  .scrollbar::-webkit-scrollbar-track {
-    background-color: #ffffff;
+    .scrollbar::-webkit-scrollbar-track {
+      background-color: #ffffff;
+    }
   }
 }
