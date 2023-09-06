@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer utilities {
-  @media only screen and (max-width: 360px) {
+  @media only screen and (min-width: 360px) {
     .scrollbar {
       overflow-y: scroll;
       scrollbar-width: thin;
