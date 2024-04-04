@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" class="overflow-x-hidden w-screen">
-  <head>
-    <title>happex</title>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<html lang="fr" class="bg-black">
+	<head>
+		<title>happex</title>
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- Open Graph metatags -->
-    <meta name="og:title" content="This is happex" />
-    <meta name="og:description" content="My own website made with VueJS and TailwindCSS. See by yourself !" />
-    <meta name="og:type" content="website" />
-    <meta name="og:image" content="https://happex.vercel.app/profile.png" />
-    <meta name="og:url" content="https://happex.vercel.app" />
-    <meta name="og:locale" content="en_US" />
-  </head>
-  <body class="bg-black text-slate-50 font-sans scrollbar">
-    <div id="app" class="space-y-8"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+		<!-- Open Graph metatags -->
+		<meta name="og:title" content="happex" />
+		<meta name="og:description" content="Site web écrit en VueJS x Tailwind" />
+		<meta name="og:type" content="website" />
+		<meta name="og:image" content="/src/assets/banner_1.png" />
+		<meta name="og:image" content="/src/assets/banner_2.png" />
+		<meta name="og:url" content="https://happex.vercel.app" />
+		<meta name="og:locale" content="fr_FR" />
+	</head>
+	<body class="bg-purple-950/25 text-slate-50 font-sans min-h-screen">
+		<div id="app"></div>
+		<div id="posts" class="grid grid-cols-1 md:px-96 md:gap-6"></div>
+		<footer class="text-center p-8">
+			<div>© happex 2023-2024 | <a href="/LICENSE">GPL-3.0</a></div>
+		</footer>
+		<script type="module" src="/src/main.js"></script>
+		<script type="module" src="/src/scripts/darflen.js"></script>
+	</body>
 </html>

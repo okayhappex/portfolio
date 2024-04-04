@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       fontFamily: {
         'sans': ['"Alexandria"', 'sans-serif']
+      },
+      screens: {
+        'xs': '480px'
       }
     },
   },
