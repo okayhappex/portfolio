@@ -24,10 +24,25 @@ function zfill(str, width) {
 
 function convertLinksToClickable(text) {
     const linkRegex = /(?:https?|ftp):\/\/[^\s/$.?#].[^\s]*/gi;
+	const boldRegex = /\*\*(.*?)\*\*/g;
+	const italicRegex = /\*(.*?)\*/g
+	const underlineRegex = /\_(.*?)\_/g
+	const stripedRegex = /\~\~(.*?)\~\~/g
+	const maskedRegex = /\|\|(.*?)\|\|/g
+	const codeRegex = /\`(.*?)\`/g
+	const mtlCodeRegex = /\`\`\`(.*?)\`\`\`/g
     
-    const newText = text.replace(linkRegex, function(link) {
-        return '<a href="' + link + '" target="_blank" class="text-purple-800">' + link + '</a>';
+    let newText = text.replace(linkRegex, function(link) {
+        return `<a href="${link}" target="_blank" class="text-purple-800">${link}</a>`;
     });
+
+	newText = newText.replace(boldRegex, `<b>$1</b>`);
+	newText = newText.replace(italicRegex, `<i>$1</i>`);
+	newText = newText.replace(underlineRegex, `<u>$1</u>`);
+	newText = newText.replace(stripedRegex, `<s>$1</s>`);
+	newText = newText.replace(maskedRegex, `$1`);
+	newText = newText.replace(codeRegex, `<pre>$1</pre>`);
+	newText = newText.replace(mtlCodeRegex, `<code>$1</code>`);
 
     return newText;
 }
@@ -45,15 +60,8 @@ fetchDarflenAPI()
 			for (let p = 0; p < 5 | p < data.posts.length; p++) {
 				let container = document.createElement('div')
 				let profile_container = document.createElement('div')
-				let profile_img = document.createElement('img')
-				let profile_username = document.createElement('span')
 				let profile_date = document.createElement('span')
 				let post_content = document.createElement('p')
-
-				profile_img.classList.add('border-[2px]', 'border-purple-700', 'rounded-full', 'w-6', 'h-6')
-				profile_img.src = "/profile.png"
-				profile_username.classList.add('text-sm', 'translate-y-[1.5px]')
-				profile_username.innerText = "happex"
 
 				const date = new Date(data.posts[p].miscellaneous.creation_time * 1000);
 
@@ -63,18 +71,31 @@ fetchDarflenAPI()
 				const hours = date.getHours();
 				const minutes = date.getMinutes();
 
-				profile_date.innerText = `- ${zfill(day, 2)}/${zfill(month, 2)}/${year} à ${zfill(hours, 2)}h${zfill(minutes, 2)}`;
-				profile_date.classList.add('text-sm', 'translate-y-[1.5px]')
+				profile_date.innerText = `${zfill(day, 2)}/${zfill(month, 2)}/${year} à ${zfill(hours, 2)}h${zfill(minutes, 2)}`;
+				profile_date.classList.add('text-xs', 'text-center', 'mx-auto', 'translate-y-[1.5px]')
 
-				container.classList.add('bg-purple-950/25', 'px-4', 'py-4', 'space-y-4', 'md:rounded-2xl', 'max-md:border-b-2', 'max-md:border-purple-800')
+				container.classList.add('bg-purple-950/25', 'p-6', 'space-y-4', 'md:rounded-2xl', 'md:p-4', 'max-md:border-b', 'max-md:border-purple-800/20')
 				
 				post_content.innerHTML = convertLinksToClickable(data.posts[p].content)
 				post_content.classList.add('text-sm')
 
-				profile_container.classList.add('flex', 'space-x-2')
-				profile_container.appendChild(profile_img)
-				profile_container.appendChild(profile_username)
+				profile_container.classList.add('text-xs', 'text-center', 'space-x-2')
 				profile_container.appendChild(profile_date)
+
+				if (data.posts[p].group && data.posts[p].group.visibility == 'public') {
+					let sep = document.createElement('span')
+					sep.innerText = '|'
+
+					let grp_content = document.createElement('a')
+					grp_content.innerText = data.posts[p].group.display_name
+					grp_content.href = `https://darflen.com/communities/${data.posts[p].group.name}`
+					grp_content.classList.add('text-purple-800', 'font-semibold')
+
+					// profile_container.classList.add('space-x-2')
+					profile_container.appendChild(sep)
+					profile_container.appendChild(grp_content)
+				}
+
 				container.appendChild(profile_container)
 				container.appendChild(post_content)
 
@@ -82,7 +103,8 @@ fetchDarflenAPI()
 					let img_container = document.createElement('img')
 					img_container.src = data.posts[p].files[0].thumbnail
 					img_container.classList.add('rounded-2xl', 'w-full', 'md:rounded-lg')
-					container.append(img_container)
+
+					container.appendChild(img_container)
 				}
 
 				document.getElementById('posts').appendChild(container)
