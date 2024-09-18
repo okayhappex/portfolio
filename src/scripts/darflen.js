@@ -25,15 +25,30 @@ function zfill(str, width) {
 function convertLinksToClickable(text) {
     const linkRegex = /(?:https?|ftp):\/\/[^\s/$.?#].[^\s]*/gi;
 	const boldRegex = /\*\*(.*?)\*\*/g;
-	const italicRegex = /\*(.*?)\*/g
-	const underlineRegex = /\_(.*?)\_/g
-	const stripedRegex = /\~\~(.*?)\~\~/g
-	const maskedRegex = /\|\|(.*?)\|\|/g
-	const codeRegex = /\`(.*?)\`/g
-	const mtlCodeRegex = /\`\`\`(.*?)\`\`\`/g
+	const pingRegex = /@(\w+)/g;
+	const hashtagRegex = /#(\w+)/g;
+	const communityRegex = /%(\w+)/g;
+	const italicRegex = /\*(.*?)\*/g;
+	const underlineRegex = /\_(.*?)\_/g;
+	const stripedRegex = /\~\~(.*?)\~\~/g;
+	const maskedRegex = /\|\|(.*?)\|\|/g;
+	const codeRegex = /`([^`]+)`/g;
+	const mtlCodeRegex = /```([\s\S]*?)```/g;
     
     let newText = text.replace(linkRegex, function(link) {
-        return `<a href="${link}" target="_blank" class="text-purple-800">${link}</a>`;
+        return `<a href="${link}" target="_blank" class="text-purple-700">${link}</a>`;
+    });
+
+	newText = newText.replace(pingRegex, function(match, username) {
+        return `<a href="https://darflen.com/users/${username}" target="_blank" class="text-purple-700">@${username}</a>`;
+    });
+
+	newText = newText.replace(hashtagRegex, function(match, hashtag) {
+        return `<a href="https://darflen.com/hashtags/${hashtag}" target="_blank" class="text-purple-700">#${hashtag}</a>`;
+    });
+
+	newText = newText.replace(communityRegex, function(match, community) {
+        return `<a href="https://darflen.com/communities/${community}" target="_blank" class="text-purple-700">~${community}</a>`;
     });
 
 	newText = newText.replace(boldRegex, `<b>$1</b>`);
@@ -47,17 +62,18 @@ function convertLinksToClickable(text) {
     return newText;
 }
 
+
 fetchDarflenAPI()
     .then(data => {
 		if (data.posts.length == 0) {
 			let span = document.createElement('div')
-			span.innerHTML = "Il n'y a rien d'intéressant à voir, allez voir <a href='https://darflen.com/softblackx' target='_blank' class='text-purple-800'>Darflen</a>."
+			span.innerHTML = "Il n'y a rien d'intéressant à voir, allez voir <a href='https://darflen.com/softblackx' target='_blank' class='text-purple-600'>Darflen</a>."
 			span.classList.add('text-center', 'text-white/50', 'w-full')
 			document.getElementById('posts').classList.add('block')
 			document.getElementById('posts').classList.remove('grid', 'grid-cols-1', 'md:grid-cols-2')
 			document.getElementById('posts').appendChild(span)
 		} else {
-			for (let p = 0; p < 5 | p < data.posts.length; p++) {
+			for (let p = 0; p < 3 & p < data.posts.length; p++) {
 				let container = document.createElement('div')
 				let profile_container = document.createElement('div')
 				let profile_date = document.createElement('span')
@@ -72,9 +88,9 @@ fetchDarflenAPI()
 				const minutes = date.getMinutes();
 
 				profile_date.innerText = `${zfill(day, 2)}/${zfill(month, 2)}/${year} à ${zfill(hours, 2)}h${zfill(minutes, 2)}`;
-				profile_date.classList.add('text-xs', 'text-center', 'mx-auto', 'translate-y-[1.5px]')
+				profile_date.classList.add('select-none', 'text-xs', 'text-center', 'mx-auto', 'translate-y-[1.5px]')
 
-				container.classList.add('bg-purple-950/25', 'p-6', 'space-y-4', 'md:rounded-2xl', 'md:p-4', 'max-md:border-b', 'max-md:border-purple-800/20')
+				container.classList.add('backdrop-blur-xl', 'bg-white/25', 'rounded-3xl', 'h-auto', 'p-6', 'space-y-4', 'self-start', 'md:rounded-2xl', 'md:p-4') //, 'max-md:border-b', 'max-md:border-purple-800/20')
 				
 				post_content.innerHTML = convertLinksToClickable(data.posts[p].content)
 				post_content.classList.add('text-sm')
@@ -85,11 +101,12 @@ fetchDarflenAPI()
 				if (data.posts[p].group && data.posts[p].group.visibility == 'public') {
 					let sep = document.createElement('span')
 					sep.innerText = '|'
+					sep.classList.add('select-none')
 
 					let grp_content = document.createElement('a')
 					grp_content.innerText = data.posts[p].group.display_name
 					grp_content.href = `https://darflen.com/communities/${data.posts[p].group.name}`
-					grp_content.classList.add('text-purple-800', 'font-semibold')
+					grp_content.classList.add('text-purple-700', 'font-semibold')
 
 					// profile_container.classList.add('space-x-2')
 					profile_container.appendChild(sep)
@@ -100,11 +117,18 @@ fetchDarflenAPI()
 				container.appendChild(post_content)
 
 				if (data.posts[p].files.length > 0 && data.posts[p].files[0].type == 'image') {
+					let img_link = document.createElement('a')
 					let img_container = document.createElement('img')
-					img_container.src = data.posts[p].files[0].thumbnail
-					img_container.classList.add('rounded-2xl', 'w-full', 'md:rounded-lg')
 
-					container.appendChild(img_container)
+					img_container.src = data.posts[p].files[0].thumbnail
+					img_link.href = data.posts[p].files[0].thumbnail
+					
+					img_container.classList.add('rounded-lg', 'w-full', 'md:rounded-lg')
+					img_link.classList.add('block', 'w_full')
+
+
+					img_link.appendChild(img_container)
+					container.appendChild(img_link)
 				}
 
 				document.getElementById('posts').appendChild(container)
