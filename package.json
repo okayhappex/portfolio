@@ -2,7 +2,7 @@
   "name": "website",
   "scripts": {
     "dev": "start vite && npx tailwindcss -i ./src/assets/base.css -o ./dist/output.css --watch",
-    "build": "vite build",
+    "build": "npx tailwindcss -i ./src/assets/base.css -o ./dist/output.css && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
