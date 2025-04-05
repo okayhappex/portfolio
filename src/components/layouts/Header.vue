@@ -17,14 +17,6 @@
 				<p>Il/lui - Apprenti dev</p>
 				<p>Spaghetti fan depuis 2008</p>
 			</div>
-			
-		</div>
-		<div class="flex border-2 border-slate-700/20 rounded-full w-fit px-4 py-2 mx-auto space-x-2 place-content-center">
-			<a class="block" href="https://github.com/okayhappex" target="_blank"><Github className="inline fill-blue-900 w-5 h-5 -translate-y-[1px]" /></a>
-			<a class="block" href="https://reddit.com/u/ha2pex" target="_blank"><Reddit className="inline stroke-blue-900 fill-blue-900 w-5 h-5 -translate-y-[1px]" /></a>
-			<a class="block" href="https://darflen.com/users/happex" target="_blank"><Darflen className="inline fill-blue-900 w-5 h-5 -translate-y-[1px]" /></a>
-			<a class="block" href="https://scratch.mit.edu/users/happex" target="_blank"><Scratch className="inline fill-blue-900 w-5 h-5 -translate-y-[1px]" /></a>
-			<a class="block" href="https://behance.net/happoutre" target="_blank"><Behance className="inline fill-blue-900 w-5 h-5 -translate-y-[1px]" /></a>
 		</div>
 	</header>
 </template>

@@ -1,11 +1,13 @@
 <script setup>
-	import Header from '../components/layouts/Header.vue';
-	import Footer from '../components/layouts/Footer.vue';
+	import Header from '@/components/layouts/Header.vue';
+	import Footer from '@/components/layouts/Footer.vue';
 
-	import Skills from '@/components/layouts/Skills.vue';
+	import Social from '@/components/layouts/Social.vue';
+	import Hobbies from '@/components/layouts/Hobbies.vue';
 </script>
 <template>
 	<Header />
-	<Skills />
+	<Social />
+	<Hobbies />
 	<Footer />
 </template>
