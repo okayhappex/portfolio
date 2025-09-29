@@ -5,10 +5,18 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				'sans': ['"Alexandria"', 'sans-serif']
+				'sans': ['"Rubik"', 'sans-serif']
 			},
 			screens: {
 				'xs': '480px'
+			},
+			colors: {
+				'background': {
+					'dark': '#07141b',
+					'light': '#ffffff'
+				},
+				'primary': '#f60939',
+				'secondary': '#ff5c26'
 			}
 		},
 	},

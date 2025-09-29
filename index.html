@@ -6,9 +6,10 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" href="/favicon.ico" />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&display=swap" />
+		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
 
 		<!-- Open Graph metatags -->
 		<meta name="og:title" content="happex" />
@@ -19,8 +20,8 @@
 		<meta name="og:url" content="https://happex.vercel.app" />
 		<meta name="og:locale" content="fr_FR" />
 	</head>
-	<body class="bg-slate-100 font-sans min-h-screen dark:bg-slate-950 dark:text-blue-50">
-		<div id="app" class="sm:pt-8"></div>
+	<body class="bg-[url('@/assets/bg.jpg')] bg-cover bg-center bg-no-repeat h-screen">
+		<div id="app" class="bg-white/95 h-screen overflow-y-scroll dark:bg-slate-950/95 dark:text-white"></div>
 		<script type="module" src="/src/main.ts"></script>
 	</body>
 </html>

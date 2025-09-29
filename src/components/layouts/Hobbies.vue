@@ -1,23 +1,16 @@
 <template>
-    <section class="p-4 space-y-4">
-        <h2 class="text-slate-800 text-lg text-center font-semibold mb-4 dark:text-slate-400">Centres d'intérêt</h2>
-        <div class="grid grid-cols-2 text-slate-800 gap-4 px-8 md:grid-cols-4 md:w-fit md:mx-auto dark:text-slate-400">
-            <div class="border-2 border-slate-700/20 rounded-2xl px-4 py-3 space-y-0 md:rounded-xl">
-                <span class="text-blue-900 text-sm font-medium md:text-xs">Programmation</span>
-                <span class="block text-2xl font-bold md:text-xl">8 ans</span>
-            </div>
-            <div class="border-2 border-slate-700/20 rounded-2xl px-4 py-3 space-y-0 md:rounded-xl">
-                <span class="text-blue-900 text-sm font-medium md:text-xs">Musique</span>
-                <span class="block text-2xl font-bold md:text-xl">6 ans</span>
-            </div>
-            <div class="border-2 border-slate-700/20 rounded-2xl px-4 py-3 space-y-0 md:rounded-xl">
-                <span class="text-blue-900 text-sm font-medium md:text-xs">Photographie</span>
-                <span class="block text-2xl font-bold md:text-xl">4 ans</span>
-            </div>
-            <div class="border-2 border-slate-700/20 rounded-2xl px-4 py-3 space-y-0 md:rounded-xl">
-                <span class="text-blue-900 text-sm font-medium md:text-xs">Cinéma</span>
-                <span class="block text-2xl font-bold md:text-xl">3 ans</span>
-            </div>
+    <section class="space-y-8">
+        <h2 class="text-slate-900 text-xl text-center uppercase font-semibold mb-4 dark:text-slate-200">Centres d'intérêt</h2>
+        <div class="flex text-slate-800 space-x-2 dark:text-slate-400 max-sm:overflow-x-scroll sm:place-content-center">
+            <button class="bg-slate-400/10 backdrop-blur-lg text-slate-700 border-[1.5px] border-slate-400 rounded-full px-4 py-2 duration-150 dark:bg-slate-700/10 dark:text-slate-400 dark:border-slate-700 hover:bg-primary/10 hover:text-primary hover:border-primary">
+                <span class="text-sm font-medium">Programmation</span>
+            </button>
+            <button class="bg-slate-400/10 backdrop-blur-lg text-slate-700 border-[1.5px] border-slate-400 rounded-full px-4 py-2 duration-150 dark:bg-slate-700/10 dark:text-slate-400 dark:border-slate-700 hover:bg-primary/10 hover:text-primary hover:border-primary">
+                <span class="text-sm font-medium">Musique</span>
+            </button>
+            <button class="bg-slate-400/10 backdrop-blur-lg text-slate-700 border-[1.5px] border-slate-400 rounded-full px-4 py-2 duration-150 dark:bg-slate-700/10 dark:text-slate-400 dark:border-slate-700 hover:bg-primary/10 hover:text-primary hover:border-primary">
+                <span class="text-sm font-medium">Photographie</span>
+            </button>
         </div>
     </section>
 </template>
